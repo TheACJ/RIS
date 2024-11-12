@@ -1,0 +1,132 @@
+{% extends  "home/base.html" %}  
+{% load static %}    
+     {% block sections %}
+    <!-- about section -->
+    <section class="layout_padding section about_dottat">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text_align_center">
+               <div class="full heading_s1">
+                  <h2>WE ARE RIS</h2>
+               </div>
+               <div class="full">
+                  <p class="large">Welcome to Royal International School, a beacon of hope and progress in our rural community. Founded by [NAME], our school was established with a singular vision: to transform the lives of villagers by bringing quality education closer to home. &nbsp;  <a class="blue_bt" href="{% url 'home:about' %}">About us</a></p>
+                  
+               </div>
+            </div>
+            <div class="col-md-12">
+               <div class="about_img margin_top_30  text_align_center">
+                  <img src="{% static 'home/images/ab_img.png' %}" alt="#" />
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- end about section -->
+
+   <!-- section -->
+   <section class="layout_padding section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text_align_center">
+               <div class="full heading_s1">
+                  <h2>Our Programs</h2>
+               </div>
+               <div class="full">
+                  <p class="large">
+                     At Royal International School, we offer a diverse range of programs designed to meet the educational needs of our community. Our goal is to provide students with the knowledge and skills necessary to succeed in today’s world. At Royal International School, we are committed to providing a well-rounded education that prepares our students for the future. Join us and be a part of our vibrant learning community &nbsp;  <a class="blue_bt" href="{% url 'home:about' %}">Read More</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+
+           <div class="col-md-4 text_align_center">
+              <div class="cours">
+                <img class="img-responsive" src="{% static 'home/images/cour1.png' %}" alt="#" />
+              </div>
+              <h3>Formal Basic Education</h3>
+              <p>Our Formal Basic Education program covers the essential subjects such as Mathematics, Science, English, and Social Studies. We follow a modern curriculum that encourages critical thinking, creativity, and problem-solving skills. Our experienced teachers use innovative teaching methods to make learning engaging and effective.</p>
+           </div>  
+
+           <div class="col-md-4 text_align_center">
+              <div class="cours">
+                <img class="img-responsive" src="{% static 'home/images/cour2.png' %}" alt="#" />
+              </div>
+              <h3>Special Literacy Programs</h3>
+              <p>We believe that literacy is the foundation of all learning. Our Literacy Programs are designed to help students of all ages improve their reading and writing skills. These programs are especially beneficial for adults and young learners who need additional support to achieve literacy proficiency.</p>
+           </div> 
+
+           <div class="col-md-4 text_align_center">
+              <div class="cours">
+                <img class="img-responsive" src="{% static 'home/images/cour3.png' %}" alt="#" />
+              </div>
+              <h3>Vocational Training</h3>
+              <p>In addition to academic education, we offer Vocational Training programs that equip students with practical skills for various trades and professions. These programs include training in areas such as agriculture, carpentry, tailoring, and information technology. Our vocational training aims to empower students with the skills needed to secure employment and contribute to the local economy.</p>
+           </div> 
+
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="full center">
+                   <a class="blue_bt" href="#">Read More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- end section -->
+
+
+   <!-- section -->
+   <section class="layout_padding section">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-12 text_align_center">
+               <div class="full heading_s1">
+                  <h2>Our Success Stories</h2>
+               </div>
+               <div class="full">
+                  <p class="large">In ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat. Duis aute irure dolor in re</p>
+               </div>
+            </div>
+            <div class="col-md-12 testimonial">
+               <div class="full text_align_center">
+                  <img src="{% static 'home/images/testimon.png' %}" alt="#" />
+                  <h3><span class="theme_color_text">koluda</span><br><small>Student</small></h3>
+               </div>
+               <div class="full margin_top_30 text_align_center">
+                 <h4>I have successfully complated</h4>
+                 <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re</p>
+               </div>
+            </div>
+         </div>
+     </div>
+   </section>
+   <!-- end section -->
+
+ 
+   <!-- section -->
+   <!-- <section class="section blue_pattern_bg" style="background-color: #3b3bff;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="full">
+                  <h4>Subscribe Now to Our Newsletter !</h4>
+                  <p>adipiscing elit, sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
+               </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form_subribe">
+                 <form>
+                    <input type="email" name="email" placeholder="Enter Your Email" />
+                    <button>Subscribe</button>
+                 </form>
+              </div>
+            </div>
+         </div>
+      </div>
+   </section> -->
+   <!-- end section -->
+       
+     {% endblock sections %}
+ 
