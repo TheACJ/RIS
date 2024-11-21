@@ -1,0 +1,81 @@
+<section id="ACJ-hero" class="js-fullheight" data-section="home">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            {% block slides %}
+             <li style="background-image: url('{% static "Home/images/img_bg_1.jpg" %}');">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                            <div class="slider-text-inner js-fullheight">
+                                <div class="desc" >
+                                    <h1 style="font-family: 'Space Grotesk'">Hi! <br><span> <a href="/portfolio" target="_blank" style="text-decoration:none;color:black">The ACJ</a></span></h1>
+                                    <h2>With us Tech Emancipation is achievable</h2>
+                                     <p><a class="btn btn-primary btn-learn" href="#" download>Download CV <i class="icon-download"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </li>
+              <li style="background-image: url('{% static "Home/images/img_bg_2.jpg" %}');background-position: 10px 10px;">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <div class="desc">
+                                    <h1 style="color:white; font-family: 'Space Grotesk'">I am a<br> Data Analyst</h1>
+                                     <h2 style="color:white" >Where there is Data, <span> <a href="/portfolio" target="_blank" style="text-decoration:none;color:white">The ACJ</a></span> will make sense of it</h2>
+                                     <p><a class="btn btn-primary btn-learn" style="color:white;border: 1px solid #fff">View Portfolio <i class="icon-briefcase"></i></a></p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </li>
+               <li style="background-image: url('{% static "Home/images/img_bg_3.jpg" %}');">
+                 <div class="overlay"></div>
+                 <div class="container-fluid">
+                     <div class="row">
+                         <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <div class="desc">
+                                    <h1 style="font-family: 'Space Grotesk'">I am a<br> Web Developer</h1>
+                                      <h2>Imagine it, <span> <a href="/portfolio" target="_blank" style="text-decoration:none;color:black">The ACJ</a></span> will make it real</h2>
+                                      <p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase1"></i></a></p>
+                                  </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+               </li>
+            {% endblock %}								
+           </ul>
+    </div>
+</section> <!-- end:section(ACJ-hero) -->
+
+
+
+
+
+
+      <!-- section -->
+      <section class="main_full banner_section_top">
+        <div class="container-fluid">
+          <div class="row">
+             <div class="full">
+                  <div class="slider_banner">
+                    <img class="img-responsive" src="{% static 'home/images/slider_img.png' %}" alt="#" />
+                      <div class="slide_cont">
+                        <div class="slider_cont_inner">
+                          <h3>Welcome To Royal International Schools' Website</h3>
+                        <p>Making rural children assets to their community and the society at large</p></p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->

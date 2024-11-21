@@ -33,6 +33,19 @@
       <link href="{% static 'home/css/colors.css' %}" rel="stylesheet">
       <!-- light box gallery -->
       <link href="{% static 'home/css/ekko-lightbox.css' %}" rel="stylesheet">
+      <!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="{% static 'home/css/icomoon.css' %}">
+      <!-- Flexslider  -->
+		{% comment %} <link rel="stylesheet" href="{% static 'home/css/flexslider.css' %}"> {% endcomment %}
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Flexslider -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+      <!-- Owl Carousel -->
+		<link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}
+
+
       {% endblock styles %}
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -98,23 +111,59 @@
       <!-- end header -->
       
       <!-- section -->
-      <section class="main_full banner_section_top">
-        <div class="container-fluid">
-          <div class="row">
-             <div class="full">
-                  <div class="slider_banner">
-                    <img class="img-responsive" src="{% static 'home/images/slider_img.png' %}" alt="#" />
-                      <div class="slide_cont">
-                        <div class="slider_cont_inner">
-                          <h3>Welcome To Royal International Schools' Website</h3>
-                        <p>Making rural children assets to their community and the society at large</p></p>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-          </div>
-        </div>
-      </section>
+      <section id="school-hero" class="js-fullheight" data-section="home">
+         <div class="flexslider js-fullheight">
+             <ul class="slides">
+                 <li style="background-image: url('{% static "home/images/slider_img1.png" %}');">
+                     <div class="overlay"></div>
+                     <div class="container-fluid">
+                         <div class="row">
+                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                 <div class="slider-text-inner">
+                                     <div class="desc">
+                                         <h1>This Royal International Schools, Ogoli</h1>
+                                         <p>Making rural children assets to their community and the society at large</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                 <li style="background-image: url('{% static "home/images/slider_img2.png" %}');">
+                     <div class="overlay"></div>
+                     <div class="container-fluid">
+                         <div class="row">
+                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                 <div class="slider-text-inner">
+                                     <div class="desc">
+                                         <h1>This is Royal International Schools, Ogoli</h1>
+                                         <p>Fostering a supportive universal learning environment</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                 <li style="background-image: url('{% static "home/images/slider_img3.png" %}');">
+                     <div class="overlay"></div>
+                     <div class="container-fluid">
+                         <div class="row">
+                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                                 <div class="slider-text-inner">
+                                     <div class="desc">
+                                         <h1>This is Royal International Schools, Ogoli</h1>
+                                         <p>Engaging methods for effective education</p>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             </ul>
+         </div>
+     </section>
+     
+      
       <!-- end section -->
     {% block sections %}
     
@@ -160,13 +209,20 @@
     {% block Js %}
     <!-- Core JavaScript
          ================================================== -->
-         <script src="{% static 'home/js/jquery.min.js' %}"></script>
+         {% comment %} <script src="{% static 'home/js/jquery.min.js' %}"></script> {% endcomment %}
          <script src="{% static 'home/js/tether.min.js' %}"></script>
          <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
          <script src="{% static 'home/js/parallax.js' %}"></script>
          <script src="{% static 'home/js/animate.js' %}"></script>
          <script src="{% static 'home/js/ekko-lightbox.js' %}"></script>
          <script src="{% static 'home/js/custom.js' %}"></script>
+         <!-- Flexslider -->
+		   {% comment %} <script src="{% static 'home/js/jquery.flexslider-min.js' %}"></script> {% endcomment %}
+		   <!-- Owl carousel -->
+		   <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+         <script src="{% static 'home/js/acj.js' %}"></script>
+
+        
     {% endblock Js %}
    
    </body>
