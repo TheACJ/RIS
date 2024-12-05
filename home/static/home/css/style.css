@@ -16,15 +16,11 @@
 body {
     font-size: 14px;
     line-height: normal;
-    /* background-color: #fff; */
-    
-    background-image: url('../images/dottet_bg.png');
-    /* background-size: cover;
-    background-position: center bottom; */
+    background-color: #fff;
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 * {
@@ -598,17 +594,17 @@ form#commant_form div.field textarea.custom_field {
 }
 
 .main_full.inner_page {
-    /* background: #80909c; */
+    background: #80909c;
     text-align: center;
-    /* min-height: 180px; */
+    min-height: 180px;
 }
 
 .main_full.inner_page h3 {
-    color: #0c0b0b;
+    color: #fff;
     margin: 0;
     font-weight: 600;
     text-transform: uppercase;
-    /* line-height: 175px; */
+    line-height: 175px;
     text-align: center;
 }
 
@@ -672,10 +668,10 @@ form#commant_form div.field textarea.custom_field {
 
 .blue_bt:hover,
 .blue_bt:focus {
-   background: #07115c;
+   background: #111;
    color: #fff;
    transition: ease all 0.7s;
-   /* border: 10px solid red; */
+   border: 10px solid red;
 }
 
 .cours + h3 {
@@ -1115,12 +1111,12 @@ a {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-/* 
+
 .about_dottat {
     background: url("{% static 'home/images/dottet_bg.png' %}");
     background-size: cover;
     background-position: center bottom;
-} */
+}
 
 /*-------------------------------------------------------------------
     3.header
@@ -4529,14 +4525,3 @@ form#commant_form div.field textarea.custom_field {
 
 
 
-.about {
-    text-transform: uppercase;
-    text-overflow: ellipsis;
-    text-align: center;
-    margin-top: -200px
-}
-
-.lg_img {
-    width: 15px;
-    
-}
