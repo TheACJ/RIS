@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g+xyp12$^w)+5pq2hh3xwk7z@kd#u%06jj#k5)ht*h5p@au&f-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,12 +76,24 @@ WSGI_APPLICATION = 'Royal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+if not DEBUG:
+        DATABASES = {
+           'default': {
+                'ENGINE': 'django.db.backends.mysql', >
+                'NAME': 'royalintschogoli_main',
+                'USER': '387994',
+                'PASSWORD': '0953Amanda',
+                'HOST': 'mysql-royalintschogoli.always>
+                'PORT': '3306',  # Default MySQL/Maria>
+            }
+        }
+else:
+        DATABASES = {                                         
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
 
 
 # Password validation
