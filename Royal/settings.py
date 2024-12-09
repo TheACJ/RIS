@@ -77,25 +77,23 @@ WSGI_APPLICATION = 'Royal.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 if not DEBUG:
-        DATABASES = {
-           'default': {
-                'ENGINE': 'django.db.backends.mysql', >
-                'NAME': 'royalintschogoli_main',
-                'USER': '387994',
-                'PASSWORD': '0953Amanda',
-                'HOST': 'mysql-royalintschogoli.always>
-                'PORT': '3306',  # Default MySQL/Maria>
-            }
-        }
+	DATABASES = {
+	   'default': {
+        	'ENGINE': 'django.db.backends.mysql',  # Use 'mysql.connector.django' if using PyMySQL
+      	  	'NAME': 'royalintschogoli_main',
+        	'USER': '387994',
+        	'PASSWORD': '0953Amanda',
+        	'HOST': 'mysql-royalintschogoli.alwaysdata.net',  # Use your DB host
+        	'PORT': '3306',  # Default MySQL/MariaDB port
+	    }
+	}
 else:
-        DATABASES = {                                         
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-        }
-
-
+	DATABASES = {
+   	   'default': {
+        	'ENGINE': 'django.db.backends.sqlite3',
+	        'NAME': BASE_DIR / 'db.sqlite3',
+    	    }
+	}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
