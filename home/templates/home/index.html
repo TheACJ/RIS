@@ -41,8 +41,8 @@
          <div class="row">
 
            <div class="col-md-4 text_align_center">
-              <div class="cours">
-                <img class="img-responsive" src="{% static 'home/images/cour1.png' %}" alt="#" />
+              <div class="oval-image">
+                <img class="img-responsive" src="{% static 'home/images/oval1.png' %}" alt="#" />
               </div>
               <h3>Formal Basic Education</h3>
               <p>Our Formal Basic Education program covers the essential subjects such as Mathematics, Science, English, and Social Studies. We follow a modern curriculum that encourages critical thinking, creativity, and problem-solving skills. Our experienced teachers use innovative teaching methods to make learning engaging and effective.</p>
@@ -57,7 +57,7 @@
            </div> 
 
            <div class="col-md-4 text_align_center">
-              <div class="cours">
+              <div class="oval-image">
                 <img class="img-responsive" src="{% static 'home/images/cour3.png' %}" alt="#" />
               </div>
               <h3>Vocational Training</h3>
@@ -104,29 +104,42 @@
    </section>
    <!-- end section -->
 
- 
-   <!-- section -->
-   <!-- <section class="section blue_pattern_bg" style="background-color: #3b3bff;">
-      <div class="container">
+   <!--section-->
+   <section class="ACJ-blog" data-section="blog">
+      <div class="ACJ-narrow-content">
          <div class="row">
-            <div class="col-md-6">
-               <div class="full">
-                  <h4>Subscribe Now to Our Newsletter !</h4>
-                  <p>adipiscing elit, sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
-               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form_subribe">
-                 <form>
-                    <input type="email" name="email" placeholder="Enter Your Email" />
-                    <button>Subscribe</button>
-                 </form>
-              </div>
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+               <span class="heading-meta">Read</span>
+               <h2 class="ACJ-heading">Recent Blog Post</h2>
             </div>
          </div>
+         <div class="row">
+            {% for post in recent_posts %}
+            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+               <div class="card">
+                  <h3 class="card-title"><a href="{{ post.image_url }}" >{{ post.title }}</a></h3>
+                  {% if post.image %}
+                     <a href="{{ post.image.url }}" target="_blank">
+                        <img class="card-img-top"
+                           style="height: 153px; max-width: 34rem; max-height: 36rem; width: 338px;"
+                           src="{{ post.image.url }}" alt="{{ post.title }}">
+                     </a>
+                  {% endif %}
+                     <div class="desc">
+                     <span><small>{{ post.date_published }}</small> | <small>{{ post.category }}</small> | <small><i class="icon-bubble3"></i> 4</small></span>
+                     
+                     <p>{{ post.content }}</p>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
       </div>
-   </section> -->
-   <!-- end section -->
+   </section>
+   <!--end section-->
+
+  
+
        
      {% endblock sections %}
  

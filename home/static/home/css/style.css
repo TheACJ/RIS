@@ -474,13 +474,6 @@ button.navbar-toggler[aria-expanded="true"] .fa-bars {
     padding-left: 0;
 }
 
-.blog_detail h3 {
-    text-transform: none;
-    font-weight: 500;
-    line-height: 32px;
-    margin-bottom: 20px;
-    text-align: justify;
-}
 
 .form_contact_main .field {
     width: 50%;
@@ -492,17 +485,7 @@ button.navbar-toggler[aria-expanded="true"] .fa-bars {
     background: #252525;
 }
 
-.br_single_blog_2 {
-    float: left;
-    width: 100%;
-    margin: 15px 0;
-}
 
-.br_single_blog_2 hr {
-    border-top: 2px dotted #d3d3d3;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 
 .layout_padding_grey_half {
     padding: 80px 105px 80px 90px;
@@ -825,12 +808,7 @@ form {
     background-color: #ffffff;
 }
 
-.tab-details .blog-meta h4 {
-    font-size: 14px;
-    margin: 0;
-    padding: 0.5rem 0 0;
-    line-height: 1.4;
-}
+
 
 div.tab {
     float: left;
@@ -900,7 +878,7 @@ div.tab button:hover {
     font-size: 14px;
 }
 
-.blog-list-widget .w-100,
+
 .footer,
 .header .dropdown-item,
 .header .dropdown-item:hover,
@@ -4540,3 +4518,5 @@ form#commant_form div.field textarea.custom_field {
     width: 15px;
     
 }
+
+

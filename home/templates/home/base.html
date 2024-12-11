@@ -36,11 +36,12 @@
       <!-- Icomoon Icon Fonts-->
 		<link rel="stylesheet" href="{% static 'home/css/icomoon.css' %}">
       <!-- Flexslider  -->
-		{% comment %} <link rel="stylesheet" href="{% static 'home/css/flexslider.css' %}"> {% endcomment %}
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="{% static 'home/css/flexslider.css' %}">
+      <link rel="stylesheet" href="{% static 'home/css/extra.css' %}">
+      {% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> {% endcomment %}
       <!-- Flexslider -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+      {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script> {% endcomment %}
       <!-- Owl Carousel -->
 		<link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
 		<link rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}
@@ -203,27 +204,81 @@
     
     {% block footer %}
       <!-- footer -->
-      <footer class="footer layout_padding">
-        <div class="container">
-           <div class="row">
+ <!--section-->
+      <section class="ACJ-contact" data-section="contact">
+         <div class="ACJ-narrow-content">
+            <div class="row">
+               <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                  <span class="heading-meta">Get in Touch</span>
+                  <h2 class="ACJ-heading">Contact</h2>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="ACJ-feature ACJ-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="ACJ-icon">
+                        <i class="icon-email"></i>
+                     </div>
+                     <div class="ACJ-text">
+                        <p><a href="mailto: agbaijoshua@gmail.com">Mail The ACJ</a></p>
+                     </div>
+                  </div><br>
 
-              <div class="col-md-4 col-sm-12">
-                 <a href="index.html"><img class="img-responsive" src="{% static 'home/images/logo_footer.png' %}" alt="#" width="30px" /></a>
-                 <div class="footer_link_heading">
-                    <div class="footer_menu margin_top_30">
-                    <ul>
-                       <li><a href="tel:9+2348119137762">+234-8119-137-762</a></li>
-                       <li><a href="mailto:royalinternationalschool@gmail.com">Email Us</a></li>
-                       <li><a href="#">Barracks, Ogoli-Ugboju, Otukpo, Benue State</a></li>
-                    </ul>
-                 </div>
-                 </div>
-              </div>
-              
-              
-           </div>
-        </div>
-     </footer>
+                  <div class="ACJ-feature ACJ-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="ACJ-icon">
+                        <i class="icon-map"></i>
+                     </div>
+                     <div class="ACJ-text">
+                        <p> Nigeria</p>
+                     </div>
+                  </div><br>
+
+                  <div class="ACJ-feature ACJ-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="ACJ-icon">
+                        <i class="icon-phone"></i>
+                     </div>
+                     <div class="ACJ-text">
+                        <p><a href="tel:+2349121490555"> Call Us</a></p>
+                     </div>
+                  </div><br>
+               </div><br><br>
+               <div class="col-md-7 col-md-push-1 msg">
+                  <div class="row">
+                     <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+                        <form action="" method="post">
+                          {% csrf_token %}
+                          {% if messages %}
+                             {% for message in messages %}
+                              <div class="alert alert-success" role="alert">
+                               {{ message }}
+                              </div>
+                              {% endfor %}
+                           {% endif %}
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Name" name="name">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Email" name="email">
+                           </div>
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Subject" name="subject">
+                           </div>
+                           <div class="form-group">
+                              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                           </div>
+                           <div class="form-group">
+                              <input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+                           </div>
+                        </form>
+
+                     </div>
+            
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+<!--end section-->
      <div class="cpy">
        <div class="container">
           <div class="row">
@@ -241,7 +296,7 @@
     {% block Js %}
     <!-- Core JavaScript
          ================================================== -->
-         {% comment %} <script src="{% static 'home/js/jquery.min.js' %}"></script> {% endcomment %}
+         <script src="{% static 'home/js/jquery.min.js' %}"></script>
          <script src="{% static 'home/js/tether.min.js' %}"></script>
          <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
          <script src="{% static 'home/js/parallax.js' %}"></script>
@@ -249,7 +304,7 @@
          <script src="{% static 'home/js/ekko-lightbox.js' %}"></script>
          <script src="{% static 'home/js/custom.js' %}"></script>
          <!-- Flexslider -->
-		   {% comment %} <script src="{% static 'home/js/jquery.flexslider-min.js' %}"></script> {% endcomment %}
+		   <script src="{% static 'home/js/jquery.flexslider-min.js' %}"></script>
 		   <!-- Owl carousel -->
 		   <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
          <script src="{% static 'home/js/acj.js' %}"></script>
