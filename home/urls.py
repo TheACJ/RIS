@@ -11,4 +11,7 @@ urlpatterns = [
     # path('portfolio/', views.portfolio, name='portfolio'),
     path('add/', views.add_blog_post, name='add_blog_post'),
 
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

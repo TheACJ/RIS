@@ -14,11 +14,11 @@
                   
                </div>
             </div>
-            <div class="col-md-12">
+            {% comment %} <div class="col-md-12 hideam">
                <div class="about_img margin_top_30  text_align_center">
                   <img src="{% static 'home/images/ab_img.png' %}" alt="#" />
                </div>
-            </div>
+            </div> {% endcomment %}
          </div>
       </div>
    </section>
@@ -49,8 +49,8 @@
            </div>  
 
            <div class="col-md-4 text_align_center">
-              <div class="cours">
-                <img class="img-responsive" src="{% static 'home/images/cour2.png' %}" alt="#" />
+              <div class="oval-image">
+                <img class="img-responsive" src="{% static 'home/images/oval2.png' %}" alt="#" />
               </div>
               <h3>Special Literacy Programs</h3>
               <p>We believe that literacy is the foundation of all learning. Our Literacy Programs are designed to help students of all ages improve their reading and writing skills. These programs are especially beneficial for adults and young learners who need additional support to achieve literacy proficiency.</p>
@@ -58,7 +58,7 @@
 
            <div class="col-md-4 text_align_center">
               <div class="oval-image">
-                <img class="img-responsive" src="{% static 'home/images/cour3.png' %}" alt="#" />
+                <img class="img-responsive" src="{% static 'home/images/oval3.png' %}" alt="#" />
               </div>
               <h3>Vocational Training</h3>
               <p>In addition to academic education, we offer Vocational Training programs that equip students with practical skills for various trades and professions. These programs include training in areas such as agriculture, carpentry, tailoring, and information technology. Our vocational training aims to empower students with the skills needed to secure employment and contribute to the local economy.</p>
@@ -86,17 +86,17 @@
                   <h2>Our Success Stories</h2>
                </div>
                <div class="full">
-                  <p class="large">In ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>consequat. Duis aute irure dolor in re</p>
+                  <p class="large">Success stories concerning the schoool goes here.<br> Success stories like the kid who was given a scholarship by the house of assembly reprensentative</p>
                </div>
             </div>
             <div class="col-md-12 testimonial">
                <div class="full text_align_center">
                   <img src="{% static 'home/images/testimon.png' %}" alt="#" />
-                  <h3><span class="theme_color_text">koluda</span><br><small>Student</small></h3>
+                  <h3><span class="theme_color_text">Student A B C</span><br><small>Student</small></h3>
                </div>
                <div class="full margin_top_30 text_align_center">
-                 <h4>I have successfully complated</h4>
-                 <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re</p>
+                 <h4>I was offered a scholarship</h4>
+                 <p>The story of the students' scholarship can go here, <br> the story is to be written in first person pronoun.</p>
                </div>
             </div>
          </div>
@@ -107,35 +107,45 @@
    <!--section-->
    <section class="ACJ-blog" data-section="blog">
       <div class="ACJ-narrow-content">
-         <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-               <span class="heading-meta">Read</span>
-               <h2 class="ACJ-heading">Recent Blog Post</h2>
-            </div>
-         </div>
-         <div class="row">
-            {% for post in recent_posts %}
-            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-               <div class="card">
-                  <h3 class="card-title"><a href="{{ post.image_url }}" >{{ post.title }}</a></h3>
-                  {% if post.image %}
-                     <a href="{{ post.image.url }}" target="_blank">
-                        <img class="card-img-top"
-                           style="height: 153px; max-width: 34rem; max-height: 36rem; width: 338px;"
-                           src="{{ post.image.url }}" alt="{{ post.title }}">
-                     </a>
-                  {% endif %}
-                     <div class="desc">
-                     <span><small>{{ post.date_published }}</small> | <small>{{ post.category }}</small> | <small><i class="icon-bubble3"></i> 4</small></span>
-                     
-                     <p>{{ post.content }}</p>
+          <div class="row">
+              <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                  <span class="heading-meta">Read</span>
+                  <h2 class="ACJ-heading">Recent Blog Post</h2>
+              </div>
+          </div>
+          <div class="row">
+              {% for post in recent_posts %}
+              <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+                  <div class="card">
+                      <h3 class="card-title"><a href="{{ post.image_url }}" >{{ post.title }}</a></h3>
+                      {% if post.image %}
+                          <a href="{{ post.image.url }}" target="_blank">
+                              <!-- Make the image responsive -->
+                              <img class="card-img-top img-fluid" 
+                                   src="{{ post.image.url }}" 
+                                   alt="{{ post.title }}">
+                          </a>
+                      {% elif post.image_url %}
+                          <a href="{{ post.image_url }}" target="_blank">
+                              <!-- External image fallback -->
+                              <img class="card-img-top img-fluid" 
+                                   src="{{ post.image_url }}" 
+                                   alt="{{ post.title }}">
+                          </a>
+                      {% else %}
+                          <p>No image available for this post.</p>
+                      {% endif %}
+                      <div class="desc">
+                          <span><small>{{ post.date_published }}</small> | <small>{{ post.category }}</small> | <small><i class="icon-bubble3"></i> 4</small></span>
+                          <p>{{ post.content }}</p>
+                      </div>
                   </div>
-               </div>
-            </div>
-            {% endfor %}
-         </div>
+              </div>
+              {% endfor %}
+          </div>
       </div>
-   </section>
+  </section>
+  
    <!--end section-->
 
   

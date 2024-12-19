@@ -31,8 +31,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=20)
     content = models.TextField(max_length=1024)
     date_published = models.DateTimeField(auto_now_add=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to='blog_images/', null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
 
     def __str__(self):
