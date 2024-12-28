@@ -45,7 +45,7 @@ def index(request):
     else:
         form = ContactForm()
 
-    return render(request, 'Home/index.html', {'form': form, 'recent_posts': recent_posts})
+    return render(request, 'home/index.html', {'form': form, 'recent_posts': recent_posts})
 
 
 
